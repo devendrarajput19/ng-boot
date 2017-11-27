@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+	<div ng-controller="getName">
+		<h2> Enter your FullName: </h2>
+
+		<label> FirstName: <input type="text" ng-model="firstname"/></label>		
+		<label> LastName: <input type="text" ng-model="lastname"/></label><br><br>
+
+		<label> Your FullName is : <strong>{{firstname}} {{lastname}}</strong></label>
+		<br/>
+		<table>
+			<br>
+			<tr>
+				<td>
+					Name in UpperCase: <strong>{{firstname | uppercase}} {{lastname | uppercase}} </strong>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Name in lowercase: <strong>{{firstname | lowercase}} {{lastname | lowercase}} </strong>
+				</td>
+			</tr>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+	<div ng-controller="usingFilters">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>DOB</th>
+					<th>Gender</th>
+					<th>Company Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="employee in data">
+					<td>{{employee.name | uppercase}}</td>
+					<td>{{employee.dateOfBirth | date:"dd/MM/yyyy"}}</td>
+					<td>{{employee.gender | lowercase}}</td>
+					<td>{{employee.companyName}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
